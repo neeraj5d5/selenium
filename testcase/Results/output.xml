@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20180805 08:59:36.039">
+<suite id="s1" name="Tests" source="C:\neeraj\testcase\Tests">
+<suite id="s1-s1" name="R" source="C:\neeraj\testcase\Tests\r.robot">
+<test id="s1-s1-t1" name="Should Give all Multible">
+<kw name="Begin Web Test" library="common" type="setup">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20180805 08:59:36.419" level="INFO">Opening browser 'ff' to base url 'https://enterprise.grabqpons.com'.</msg>
+<status status="PASS" starttime="20180805 08:59:36.419" endtime="20180805 08:59:58.375"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180805 08:59:58.375" endtime="20180805 09:00:01.894"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>4s</arg>
+</arguments>
+<msg timestamp="20180805 09:00:05.897" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20180805 09:00:01.894" endtime="20180805 09:00:05.897"></status>
+</kw>
+<status status="PASS" starttime="20180805 08:59:36.419" endtime="20180805 09:00:05.897"></status>
+</kw>
+<kw name="Get CSV Data" library="DataManager">
+<arguments>
+<arg>${All input Path Csv}</arg>
+</arguments>
+<assign>
+<var>${Giving The Data From The Csv}</var>
+</assign>
+<kw name="read csv file">
+<arguments>
+<arg>${FilePath}</arg>
+</arguments>
+<assign>
+<var>${Data} =</var>
+</assign>
+<msg timestamp="20180805 09:00:05.913" level="FAIL">No keyword with name 'read csv file' found.</msg>
+<status status="FAIL" starttime="20180805 09:00:05.913" endtime="20180805 09:00:05.913"></status>
+</kw>
+<status status="FAIL" starttime="20180805 09:00:05.897" endtime="20180805 09:00:05.913"></status>
+</kw>
+<kw name="End Web Test" library="common" type="teardown">
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20180805 09:00:05.917" endtime="20180805 09:00:09.180"></status>
+</kw>
+<status status="PASS" starttime="20180805 09:00:05.913" endtime="20180805 09:00:09.180"></status>
+</kw>
+<status status="FAIL" starttime="20180805 08:59:36.415" endtime="20180805 09:00:09.180" critical="yes">No keyword with name 'read csv file' found.</status>
+</test>
+<status status="FAIL" starttime="20180805 08:59:36.103" endtime="20180805 09:00:09.188"></status>
+</suite>
+<status status="FAIL" starttime="20180805 08:59:36.051" endtime="20180805 09:00:09.196"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" id="s1-s1" name="R">Tests.R</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20180805 08:59:36.407" level="ERROR">Error in file 'C:\neeraj\testcase\Ressorices\po\DataManager.robot': Test library '..\Customelibs\Csv.py' does not exist.</msg>
+</errors>
+</robot>
